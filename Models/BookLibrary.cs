@@ -4,7 +4,7 @@ namespace view_models.Models
 {
   public class BookLibrary
   {
-    public List<Book> AllBooks { get; set; }
+    public List<Book> AllBooks { get; set; } = new List<Book>();
     public BookLibrary()
     {
       AllBooks.Add(new Book("Hamlet", "Bill Shakespeare", 1602));
