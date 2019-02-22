@@ -10,12 +10,13 @@ namespace view_models.Controllers
 {
     public class HomeController : Controller
     {
+        private static User bobRoss = new User("Bob", "Ross"); // current user
+        private static BookLibrary allBooks = new BookLibrary(); // collection of books
+
         [Route("")]
         [HttpGet]
         public IActionResult Index()
         {
-            User bobRoss = new User("Bob", "Ross"); // current user
-            BookLibrary allBooks = new BookLibrary(); // collection of books
 
             Dashboard dashboard = new Dashboard(bobRoss, allBooks);
             /* 
