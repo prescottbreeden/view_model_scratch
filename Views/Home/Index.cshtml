@@ -1,0 +1,10 @@
+﻿@model Dashboard
+
+<h1>Welcome @Model.CurrentUser.FirstName!</h1>
+<p>Here are all available books:</p>
+@{
+  foreach(Book book in @Model.Books.AllBooks)
+  {
+    <p>@book.Title -- @book.Author -- @book.ReleaseYear</p>
+  }
+}
